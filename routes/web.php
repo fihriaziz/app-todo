@@ -34,6 +34,8 @@ Route::get('/oneToManyPolymorphic', [OneToManyPolymorphicController::class, 'ind
 Route::get('/create-post', [OneToOnePolymorphicController::class, 'create']);
 Route::post('/create', [OneToOnePolymorphicController::class, 'store']);
 
+Route::get('/create-video', [OneToManyPolymorphicController::class, 'create_video']);
+Route::post('/create-video-many', [OneToManyPolymorphicController::class, 'store']);
 
 Route::get('/create-post-many', [OneToManyPolymorphicController::class, 'create_post']);
 Route::post('/create-post-many', [OneToManyPolymorphicController::class, 'save']);
