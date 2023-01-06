@@ -11,15 +11,17 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($comments as $comment)
+                        @foreach ($posts as $post)
                         <tr>
-                                <td> {{ $comment->commentable->body }}
+                            <td> {{ $post->title }}
+                                @foreach ($post->comments as $comment)
                                     <ul>
-                                        <li>{{ $comment->commentable?->title}}</li>
+                                        <li>{{ $comment->body }}</li>
                                     </ul>
-                                </td>
-                            </tr>
-                            @endforeach
+                                @endforeach
+                            </td>
+                        </tr>
+                        @endforeach
                         </tbody>
                 </table>
             </div>

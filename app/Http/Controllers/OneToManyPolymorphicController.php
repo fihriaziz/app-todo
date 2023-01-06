@@ -11,9 +11,9 @@ class OneToManyPolymorphicController extends Controller
 {
     public function index()
     {
-        $comments = Comment::with('commentable')->get();
+        $posts = Post::with('comments')->get();
 
-        return view('OneToManyPolymorphic.index', compact('comments'));
+        return view('OneToManyPolymorphic.index', compact('posts'));
     }
 
     public function create_post()
