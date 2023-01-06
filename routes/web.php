@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\ManyController;
 use App\Http\Controllers\ManyToManyController;
+use App\Http\Controllers\ManyToManyPolymorphicController;
+use App\Http\Controllers\ManyToMayPolymorphicController;
 use App\Http\Controllers\OneController;
 use App\Http\Controllers\OneToManyPolymorphicController;
 use App\Http\Controllers\OneToOnePolymorphicController;
@@ -39,3 +41,5 @@ Route::post('/create-video-many', [OneToManyPolymorphicController::class, 'store
 
 Route::get('/create-post-many', [OneToManyPolymorphicController::class, 'create_post']);
 Route::post('/create-post-many', [OneToManyPolymorphicController::class, 'save']);
+
+Route::get('/manyToManyPolymorphic', [ManyToManyPolymorphicController::class, 'index']);
