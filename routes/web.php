@@ -43,3 +43,6 @@ Route::get('/create-post-many', [OneToManyPolymorphicController::class, 'create_
 Route::post('/create-post-many', [OneToManyPolymorphicController::class, 'save']);
 
 Route::get('/manyToManyPolymorphic', [ManyToManyPolymorphicController::class, 'index']);
+
+Route::get('/create-post-ManyTomany', [ManyToManyPolymorphicController::class, 'create']);
+Route::post('/create-post-ManyTomany', [ManyToManyPolymorphicController::class, 'store']);
