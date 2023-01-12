@@ -46,3 +46,6 @@ Route::get('/manyToManyPolymorphic', [ManyToManyPolymorphicController::class, 'i
 
 Route::get('/create-post-ManyTomany', [ManyToManyPolymorphicController::class, 'create']);
 Route::post('/create-post-ManyTomany', [ManyToManyPolymorphicController::class, 'store']);
+
+Route::get('/create-user-roles', [ManyToManyController::class, 'create']);
+Route::post('/create-user-roles', [ManyToManyController::class, 'store']);
